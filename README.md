@@ -26,9 +26,9 @@
 
 ## 🛠 Built With <a name="built-with"></a>
 
--[ ] React
--[ ] Redux
--[ ] Jest
+- [ ] React
+- [ ] Redux
+- [ ] Jest
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>

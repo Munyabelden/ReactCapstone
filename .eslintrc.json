@@ -26,7 +26,6 @@
       "components/",
       "__tests__/",
       "redux/",
-      "setupTest.js",
-      "App.js"
+      "setupTest.js"
     ]
   }
