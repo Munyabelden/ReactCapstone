@@ -16,6 +16,8 @@ const Form = ({ onSearch }) => {
 
   return (
     <form>
+      <span></span>
+      <h2>Metrics Webapp</h2>
       <input
         type="text"
         placeholder="Search by country name"

@@ -1,0 +1,6 @@
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background: rgb(31, 90, 207);
+}

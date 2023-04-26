@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import Country from './Country';
 import Form from './Search';
+import Header from './Header';
+import loadingGif from '../assets/loading.gif';
 import './styles/Countries.css';
 
 function Countries() {
@@ -20,29 +22,41 @@ function Countries() {
   };
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className='loading'><img src={loadingGif} alt='Loading....'/></div>;
   }
 
   return (
     <div>
-      <Form onSearch={handleSearch} />
-      {searchResults.length > 0 ? (
-        searchResults.map((country) => (
-          <NavLink key={country.alpha2Code} to={{ pathname: `/details/${country.name}` }}>
-            <Country key={country.alpha3Code} country={country} />
-          </NavLink>
-        ))
-      ) : (
-        countries.length > 0 ? (
-          countries.map((country) => (
-            <NavLink key={country.alpha2Code} to={{ pathname: `/details/${country.name}` }}>
-              <Country key={country.alpha3Code} country={country} />
-            </NavLink>
+      <div>
+        <Form onSearch={handleSearch} />
+        <Header country={countries}/>
+      </div>
+      <h3>Countries({countries.length})</h3>
+      <ul>
+        {searchResults.length > 0 ? (
+          searchResults.map((country) => (
+            <li>
+              <NavLink key={country.alpha2Code} to={{ pathname: `/details/${country.name}` }}>
+              <span className='arrow-details'>&rarr;</span>
+                <Country key={country.alpha3Code} country={country} />
+              </NavLink>
+            </li>
           ))
         ) : (
-          <div>Check your connection and try reloading</div>
-        )
-      )}
+          countries.length > 0 ? (
+            countries.map((country) => (
+              <li>
+                <NavLink key={country.alpha2Code} to={{ pathname: `/details/${country.name}` }}>
+                <span className='arrow-details'>&rarr;</span>
+                  <Country key={country.alpha3Code} country={country} />
+                </NavLink>
+              </li>
+            ))
+          ) : (
+            <div>Check your connection and try reloading</div>
+          )
+        )}
+      </ul>
     </div>
   );
 }

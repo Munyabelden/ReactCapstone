@@ -1,0 +1,42 @@
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+  background: rgb(29, 57, 111);
+}
+
+.top a {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.flag {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  background: rgb(48, 94, 186);
+  padding-bottom: 20px;
+}
+
+.flag h2 span {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.statistics {
+ grid-template-columns: 1fr 1fr 1fr;
+}
+
+.statistics li {
+  padding-block: 30px;
+}
+
+.statistics li span {
+  font-size: 20px;
+  font-weight: 500;
+} 
+
