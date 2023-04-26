@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
 
-const Countries_API = 'https://restcountries.com/v2/all';
+export const Countries_API = 'https://restcountries.com/v2/all';
 
 const initialState = {
   countries: [],
@@ -9,8 +8,11 @@ const initialState = {
 };
 
 export const fetchCountry = createAsyncThunk('country/fetchCountry', async () => {
-  const res = await axios.get(Countries_API);
-  const data = res.data;
+  const res = await fetch(Countries_API);
+  if(!res.ok){
+    throw new Error('Failed to fetch')
+  }
+  const data = await res.json();
   return data;
 });
 
