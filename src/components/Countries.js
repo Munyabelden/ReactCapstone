@@ -22,7 +22,7 @@ function Countries() {
   };
 
   if (loading) {
-    return <div className='loading'><img src={loadingGif} alt='Loading....'/></div>;
+    return <div className='loading' data-testid="loading"><img src={loadingGif} alt='Loading....'/></div>;
   }
 
   return (
@@ -35,7 +35,7 @@ function Countries() {
       <ul>
         {searchResults.length > 0 ? (
           searchResults.map((country) => (
-            <li>
+            <li key={country.name}>
               <NavLink key={country.alpha2Code} to={{ pathname: `/details/${country.name}` }}>
               <span className='arrow-details'>&rarr;</span>
                 <Country key={country.alpha3Code} country={country} />
@@ -45,7 +45,7 @@ function Countries() {
         ) : (
           countries.length > 0 ? (
             countries.map((country) => (
-              <li>
+              <li key={country.name}>
                 <NavLink key={country.alpha2Code} to={{ pathname: `/details/${country.name}` }}>
                 <span className='arrow-details'>&rarr;</span>
                   <Country key={country.alpha3Code} country={country} />
@@ -53,7 +53,7 @@ function Countries() {
               </li>
             ))
           ) : (
-            <div>Check your connection and try reloading</div>
+            <div>Check your connection and reload</div>
           )
         )}
       </ul>
