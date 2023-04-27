@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   padding: 15px;
   background: rgb(29, 57, 111);
 }
@@ -14,12 +14,18 @@
 }
 
 .flag {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: end;
   background: rgb(48, 94, 186);
   padding-bottom: 20px;
+  padding-inline: 20px;
+}
+
+.flag img {
+  width: 300px;
 }
 
 .flag h2 span {
@@ -28,15 +34,20 @@
 }
 
 .statistics {
- grid-template-columns: 1fr 1fr 1fr;
+  display: row;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .statistics li {
   padding-block: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .statistics li span {
   font-size: 20px;
   font-weight: 500;
 } 
-

@@ -1,3 +1,10 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -26,6 +33,10 @@ a {
   color: #fff;
 }
 
+.flag img {
+  width: 500px;
+}
+
 form {
   width: 100%;
   display: flex;
@@ -33,7 +44,7 @@ form {
   justify-content: space-between;
   align-items: center; 
   background: rgb(41, 74, 141);
-  padding-block: -15px;
+  padding-block: 10px;
   position: fixed;
 }
 
@@ -42,4 +53,22 @@ input {
   margin-inline: 25px;
   border-radius: 5px;
   border: none;
+}
+
+ul {
+  background: rgb(48, 94, 186); 
+}
+
+@media (max-width: 768px) {
+  .arrow-details {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    padding: 0 5px 3px 5px;
+    z-index: 1000;
+    font-weight: 600;
+  }
+
+  div .flag img {
+    width: 250px;
+  }
 }

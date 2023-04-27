@@ -32,7 +32,7 @@ function Countries() {
         <Header country={countries}/>
       </div>
       <h3>Countries({countries.length})</h3>
-      <ul>
+      <ul className="countries">
         {searchResults.length > 0 ? (
           searchResults.map((country) => (
             <li key={country.name}>

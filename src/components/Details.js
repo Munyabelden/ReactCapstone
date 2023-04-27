@@ -21,7 +21,7 @@ const Details = () => {
       </div>
       <div className='flag'>
         <img src={country.flag} alt={`${country.name}'s flag`} />
-        <h2>{country.name}<br></br> <span>{country.timezones}</span></h2>
+        <h2>{country.name}<br></br> <span>{country.area} | </span></h2>
       </div>
       <h3>Statistics</h3>
       <ul className='statistics'>
