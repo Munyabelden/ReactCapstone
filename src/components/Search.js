@@ -1,17 +1,15 @@
-import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import '@fortawesome/fontawesome-free/css/all.css';
 
 const Form = ({ onSearch }) => {
   const { countries } = useSelector((state) => state.countries);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState('');
 
   const handleChange = (event) => {
-    const value = event.target.value;
+    const {value}= event.target;
     setSearchTerm(value);
-    const filteredCountries = countries.filter((country) =>
-      country.name.toLowerCase().includes(value.toLowerCase())
-    );
+    const filteredCountries = countries.filter((country) => country.name.toLowerCase().includes(value.toLowerCase()));
     onSearch(filteredCountries);
   };
 

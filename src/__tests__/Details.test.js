@@ -9,8 +9,8 @@ const mockStore = configureMockStore([thunk]);
 
 describe('Details component', () => {
   let store;
-  
-  beforeEach(async() => {
+
+  beforeEach(async () => {
     store = mockStore({
       countries: {
         countries: [
@@ -54,16 +54,16 @@ describe('Details component', () => {
           area: 1000,
           timezones: 'Timezone 1',
         },
-        ]
-      )
+      ]
+      ),
     });
   });
 
   it('should render country not found if country empty', () => {
     render(
       <Provider store={store}>
-          <Details />
-      </Provider>
+        <Details />
+      </Provider>,
     );
 
     expect(screen.getByText('Country not found')).toBeInTheDocument();

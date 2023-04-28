@@ -9,8 +9,8 @@ const initialState = {
 
 export const fetchCountry = createAsyncThunk('country/fetchCountry', async () => {
   const res = await fetch(Countries_API);
-  if(!res.ok){
-    throw new Error('Failed to fetch')
+  if (!res.ok) {
+    throw new Error('Failed to fetch');
   }
   const data = await res.json();
   return data;
@@ -31,8 +31,8 @@ const countryReducer = createSlice({
       .addCase(fetchCountry.rejected, (state) => {
         state.loading = false;
         state.countries = initialState.countries;
-      })
-  }
+      });
+  },
 });
 
 export const countrySlice = countryReducer.reducer;
