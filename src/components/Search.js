@@ -10,11 +10,11 @@ const Form = ({ onSearch }) => {
   const handleChange = (event) => {
     const { value } = event.target;
     setSearchTerm(value);
-    const filteredCountries = countries.filter((con) => {
-      return con.name.toLowerCase().includes(value.toLowerCase());
-    });
+    const filteredCountries = countries.filter((con) =>
+      con.name.toLowerCase().includes(value.toLowerCase())
+    );
     onSearch(filteredCountries);
-  };  
+  };
 
   return (
     <div className="form">

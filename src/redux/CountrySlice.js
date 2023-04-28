@@ -34,7 +34,7 @@ const countryReducer = createSlice({
         ...state,
         loading: false,
         countries: initialState.countries,
-      }));    
+      }));
   },
 });
 
