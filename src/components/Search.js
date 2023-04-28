@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-import '@fortawesome/fontawesome-free/css/all.css';
 
 const Form = ({ onSearch }) => {
   const { countries } = useSelector((state) => state.countries);
