@@ -15,7 +15,6 @@ const store = mockStore({
 });
 
 describe('Countries', () => {
-
   it('renders the list of countries when loading is false', () => {
     const countries = [];
     render(
@@ -26,7 +25,7 @@ describe('Countries', () => {
 
     expect(screen.getByText(`Countries(${countries.length})`)).toBeInTheDocument();
   });
-  
+
   it('renders error message when there is an error', () => {
     const error = 'Check your connection and reload';
 

@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Countries from './components/Countries';
 import Details from './components/Details';
 
-const App = () => {
+function App() {
   return (
     <div className="App">
       <Routes>

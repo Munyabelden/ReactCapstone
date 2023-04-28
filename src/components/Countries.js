@@ -29,20 +29,23 @@ function Countries() {
     <div>
       <div>
         <Form onSearch={handleSearch} />
-        <Header country={countries}/>
+        <Header country={countries} />
       </div>
       <h3>
-        Countries({countries.length}) Population
+        Countries(
+          {countries.length}
+        )
+        Population
       </h3>
       <ul className="countries">
         {searchResults.length > 0 ? (
           searchResults.map((country) => (
             <li key={country.name}>
               <NavLink key={country.alpha2Code} to={{ pathname: `/details/${country.name}` }}>
-              <span className="arrow-details">&rarr;</span>
-                <Country 
-                  key={country.alpha3Code} 
-                  country={country} 
+                <span className="arrow-details">&rarr;</span>
+                <Country
+                  key={country.alpha3Code}
+                  country={country}
                 />
               </NavLink>
             </li>
@@ -52,10 +55,10 @@ function Countries() {
             countries.map((country) => (
               <li key={country.name}>
                 <NavLink key={country.alpha2Code} to={{ pathname: `/details/${country.name}` }}>
-                <span className="arrow-details">&rarr;</span>
-                  <Country 
-                    key={country.alpha3Code} 
-                    country={country} 
+                  <span className="arrow-details">&rarr;</span>
+                  <Country
+                    key={country.alpha3Code}
+                    country={country}
                   />
                 </NavLink>
               </li>

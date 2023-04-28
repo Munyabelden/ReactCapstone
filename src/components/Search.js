@@ -7,16 +7,16 @@ const Form = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleChange = (event) => {
-    const {value}= event.target;
+    const { value } = event.target;
     setSearchTerm(value);
-    const filteredCountries = countries.filter((country) => country.name.toLowerCase().includes(value.toLowerCase()));
+    const filteredCountries = countries.filter((con) => con.name.toLowerCase().includes(value.toLowerCase()));
     onSearch(filteredCountries);
   };
 
   return (
     <div className="form">
       <span>
-        <i class="fa-solid fa-chevron-left"></i>
+        <i className="fa-solid fa-chevron-left" />
       </span>
       <form>
         <h2>Metrics Webapp</h2>
@@ -29,8 +29,8 @@ const Form = ({ onSearch }) => {
         />
       </form>
       <span>
-        <i class="fa-solid fa-gear"></i>
-        <i class="fa-solid fa-microphone"></i>
+        <i className="fa-solid fa-gear" />
+        <i className="fa-solid fa-microphone" />
       </span>
     </div>
   );

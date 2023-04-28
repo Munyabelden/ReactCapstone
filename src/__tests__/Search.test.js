@@ -3,7 +3,7 @@ import { render, fireEvent, screen } from '@testing-library/react';
 import { useSelector } from 'react-redux';
 import Form from '../components/Search';
 
-jest.mock("react-redux", () => ({
+jest.mock('react-redux', () => ({
   useSelector: jest.fn(),
 }));
 

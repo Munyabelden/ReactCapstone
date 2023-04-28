@@ -17,22 +17,23 @@ const Details = () => {
     <div>
       <div className="top">
         <NavLink to="/">
-          <i class="fa-solid fa-chevron-left"></i>
+          <i className="fa-solid fa-chevron-left" />
         </NavLink>
         <span>
-          {country.name} 
+          {country.name}
           Details
         </span>
         <span>
-          <i class="fa-solid fa-gear"></i>
+          <i className="fa-solid fa-gear" />
         </span>
       </div>
       <div className="flag">
         <img src={country.flag} alt={`${country.name}'s flag`} />
         <h2>
-          {country.name}<br></br> 
+          {country.name}
+          <br />
           <span>
-            {country.area} 
+            {country.area}
             |
           </span>
         </h2>
