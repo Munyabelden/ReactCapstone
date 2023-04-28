@@ -102,6 +102,10 @@ You can deploy this project using:
 - Twitter: [@twitterhandle](https://twitter.com/munyaradzi045)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/munyaradzi-mugauri-828a7b24a/)
 
+ **Nelson Sakwa**
+
+- Behance: [@behance](https://www.behance.net/sakwadesignstudio)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
