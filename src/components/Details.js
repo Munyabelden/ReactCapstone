@@ -34,7 +34,6 @@ const Details = () => {
           <br />
           <span>
             {country.area}
-            |
           </span>
         </h2>
       </div>

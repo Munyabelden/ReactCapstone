@@ -21,6 +21,38 @@ function Countries() {
     setSearchResults(results);
   };
 
+  const renderCountries = () => {
+    if (searchResults.length > 0) {
+      return searchResults.map((country) => (
+        <li key={country.name}>
+          <NavLink key={country.alpha2Code} to={{ pathname: `/details/${country.name}` }}>
+            <span className="arrow-details">&rarr;</span>
+            <Country
+              key={country.alpha3Code}
+              country={country}
+            />
+          </NavLink>
+        </li>
+      ));
+    }
+
+    if (countries.length > 0) {
+      return countries.map((country) => (
+        <li key={country.name}>
+          <NavLink key={country.alpha2Code} to={{ pathname: `/details/${country.name}` }}>
+            <span className="arrow-details">&rarr;</span>
+            <Country
+              key={country.alpha3Code}
+              country={country}
+            />
+          </NavLink>
+        </li>
+      ));
+    }
+
+    return <div>Check your connection and reload</div>;
+  };
+
   if (loading) {
     return <div className="loading" data-testid="loading"><img src={loadingGif} alt="Loading...." /></div>;
   }
@@ -38,35 +70,7 @@ function Countries() {
         Population
       </h3>
       <ul className="countries">
-        {searchResults.length > 0 ? (
-          searchResults.map((country) => (
-            <li key={country.name}>
-              <NavLink key={country.alpha2Code} to={{ pathname: `/details/${country.name}` }}>
-                <span className="arrow-details">&rarr;</span>
-                <Country
-                  key={country.alpha3Code}
-                  country={country}
-                />
-              </NavLink>
-            </li>
-          ))
-        ) : (
-          countries.length > 0 ? (
-            countries.map((country) => (
-              <li key={country.name}>
-                <NavLink key={country.alpha2Code} to={{ pathname: `/details/${country.name}` }}>
-                  <span className="arrow-details">&rarr;</span>
-                  <Country
-                    key={country.alpha3Code}
-                    country={country}
-                  />
-                </NavLink>
-              </li>
-            ))
-          ) : (
-            <div>Check your connection and reload</div>
-          )
-        )}
+        {renderCountries()}
       </ul>
     </div>
   );

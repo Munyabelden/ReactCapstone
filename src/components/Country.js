@@ -10,7 +10,7 @@ function Country({ country }) {
       <p>{country.population}</p>
     </div>
   );
-};
+}
 
 Country.propTypes = {
   country: PropTypes.shape({

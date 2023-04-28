@@ -8,6 +8,10 @@
   background: rgb(29, 57, 111);
 }
 
+.top span {
+  margin-right: 10px;
+}
+
 .top a {
   font-size: 30px;
   font-weight: 700;

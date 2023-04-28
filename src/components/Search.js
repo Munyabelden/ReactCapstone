@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 import '@fortawesome/fontawesome-free/css/all.css';
 
 const Form = ({ onSearch }) => {
@@ -34,6 +35,10 @@ const Form = ({ onSearch }) => {
       </span>
     </div>
   );
+};
+
+Form.propTypes = {
+  onSearch: PropTypes.func.isRequired,
 };
 
 export default Form;

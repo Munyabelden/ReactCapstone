@@ -9,6 +9,6 @@ function Header() {
       <h1>Our World</h1>
     </div>
   );
-};
+}
 
 export default Header;
