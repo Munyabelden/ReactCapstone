@@ -23,7 +23,7 @@ describe('Countries', () => {
       </Provider>,
     );
 
-    expect(screen.getByText(`Countries(${countries.length})`)).toBeInTheDocument();
+    expect(screen.getByText(`Countries(${countries.length}) Population`)).toBeInTheDocument();
   });
 
   it('renders error message when there is an error', () => {
