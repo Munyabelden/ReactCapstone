@@ -9,7 +9,7 @@ const Form = ({ onSearch }) => {
 
   const handleChange = (event) => {
     const { value } = event.target;
-    setSearchTerm(value); 
+    setSearchTerm(value);
     onSearch(countries.filter((con) => con.name.toLowerCase().includes(value.toLowerCase())));
   };
 
