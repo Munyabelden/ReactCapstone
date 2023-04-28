@@ -18,29 +18,23 @@ export const fetchCountry = createAsyncThunk('country/fetchCountry', async () =>
 
 const countryReducer = createSlice({
   name: 'countries',
-  initialState: initialState,
+  initialState,
   extraReducers: (builder) => {
     builder
-      .addCase(fetchCountry.pending, (state) => {
-        return {
-          ...state,
-          loading: true,
-        };
-      })
-      .addCase(fetchCountry.fulfilled, (state, action) => {
-        return {
-          ...state,
-          loading: false,
-          countries: action.payload,
-        };
-      })
-      .addCase(fetchCountry.rejected, (state) => {
-        return {
-          ...state,
-          loading: false,
-          countries: initialState.countries,
-        };
-      });
+      .addCase(fetchCountry.pending, (state) => ({
+        ...state,
+        loading: true,
+      }))
+      .addCase(fetchCountry.fulfilled, (state, action) => ({
+        ...state,
+        loading: false,
+        countries: action.payload,
+      }))
+      .addCase(fetchCountry.rejected, (state) => ({
+        ...state,
+        loading: false,
+        countries: initialState.countries,
+      }));    
   },
 });
 

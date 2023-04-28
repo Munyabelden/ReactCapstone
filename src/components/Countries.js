@@ -65,7 +65,7 @@ function Countries() {
       </div>
       <h3>
         Countries(
-          {countries.length}
+        {countries.length}
         )
         Population
       </h3>
