@@ -1,11 +1,11 @@
 import React from 'react';
 import logo from '../assets/logo.gif';
-import './styles/Header.css'
+import './styles/Header.css';
 
-const Header = () => {
+function Header() {
   return (
-    <div className='header'>
-      <img src={ logo } alt='Logo GIF'/>
+    <div className="header" data-testid="home">
+      <img src={logo} alt="Logo GIF" />
       <h1>Our World</h1>
     </div>
   );

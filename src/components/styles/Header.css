@@ -12,3 +12,10 @@
 img {
   width: 300px;
 }
+
+@media (max-width: 768px) {
+  img {
+    width: 180px;
+    padding-top: 20px;
+  }
+}

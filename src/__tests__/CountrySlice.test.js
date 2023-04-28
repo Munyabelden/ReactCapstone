@@ -12,7 +12,7 @@ describe('country reducer', () => {
     expect(
       countrySlice(undefined, {
         type: fetchCountry.pending.type,
-      })
+      }),
     ).toEqual({
       countries: [],
       loading: true,
@@ -24,7 +24,7 @@ describe('country reducer', () => {
       countrySlice(undefined, {
         type: fetchCountry.fulfilled.type,
         payload: [{ name: 'Country A' }, { name: 'Country B' }],
-      })
+      }),
     ).toEqual({
       countries: [{ name: 'Country A' }, { name: 'Country B' }],
       loading: false,
@@ -35,7 +35,7 @@ describe('country reducer', () => {
     expect(
       countrySlice(undefined, {
         type: fetchCountry.rejected.type,
-      })
+      }),
     ).toEqual({
       countries: [],
       loading: false,

@@ -1,3 +1,10 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -26,20 +33,71 @@ a {
   color: #fff;
 }
 
-form {
+div .flag img {
+  width: 500px;
+}
+
+.form {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center; 
   background: rgb(41, 74, 141);
-  padding-block: -15px;
+  padding-block: 10px;
+  padding-inline: 5px;
   position: fixed;
 }
 
+.form span {
+  letter-spacing: 10px;
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 input {
-  padding: 8px 15px;
-  margin-inline: 25px;
-  border-radius: 5px;
-  border: none;
+ display: none;
+}
+
+@media (min-width: 768px) {
+  input {
+    display: block;
+    padding: 8px 15px;
+    margin-inline: 25px;
+    border-radius: 5px;
+    border: none;
+  }
+}
+
+ul {
+  background: rgb(48, 94, 186); 
+}
+
+.statistics li:nth-child(odd) {
+  background: rgb(48, 94, 186);
+}
+
+@media (max-width: 768px) {
+
+  .countries li:nth-child(4n + 3),
+  .countries li:nth-child(4n + 2) {
+    background: rgb(48, 94, 186);
+  }
+
+  .arrow-details {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    padding: 0 5px 3px 5px;
+    z-index: 1000;
+    font-weight: 600;
+  }
+
+  div .flag img {
+    width: 250px;
+  }
 }

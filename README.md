@@ -26,9 +26,9 @@
 
 ## 🛠 Built With <a name="built-with"></a>
 
--[ ] React
--[ ] Redux
--[ ] Jest
+- [ ] React
+- [ ] Redux
+- [ ] Jest
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
@@ -101,6 +101,10 @@ You can deploy this project using:
 - GitHub: [@githubhandle](https://github.com/Munyabelden/)
 - Twitter: [@twitterhandle](https://twitter.com/munyaradzi045)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/munyaradzi-mugauri-828a7b24a/)
+
+ **Nelson Sakwa**
+
+- Behance: [@behance](https://www.behance.net/sakwadesignstudio)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
