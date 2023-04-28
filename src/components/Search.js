@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import '@fortawesome/fontawesome-free/css/all.css';
 
 const Form = ({ onSearch }) => {
   const { countries } = useSelector((state) => state.countries);
@@ -15,17 +16,25 @@ const Form = ({ onSearch }) => {
   };
 
   return (
-    <form>
-      <span></span>
-      <h2>Metrics Webapp</h2>
-      <input
-        type="text"
-        placeholder="Search by country name"
-        name="Search by country name"
-        value={searchTerm}
-        onChange={handleChange}
-      />
-    </form>
+    <div className="form">
+      <span>
+        <i class="fa-solid fa-chevron-left"></i>
+      </span>
+      <form>
+        <h2>Metrics Webapp</h2>
+        <input
+          type="text"
+          placeholder="Search by country name"
+          name="Search by country name"
+          value={searchTerm}
+          onChange={handleChange}
+        />
+      </form>
+      <span>
+        <i class="fa-solid fa-gear"></i>
+        <i class="fa-solid fa-microphone"></i>
+      </span>
+    </div>
   );
 };
 

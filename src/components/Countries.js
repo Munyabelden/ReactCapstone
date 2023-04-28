@@ -31,7 +31,7 @@ function Countries() {
         <Form onSearch={handleSearch} />
         <Header country={countries}/>
       </div>
-      <h3>Countries({countries.length})</h3>
+      <h3>Countries({countries.length}) Population</h3>
       <ul className="countries">
         {searchResults.length > 0 ? (
           searchResults.map((country) => (

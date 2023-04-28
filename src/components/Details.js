@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink, useParams } from 'react-router-dom';
+import '@fortawesome/fontawesome-free/css/all.css';
 import './styles/Details.css';
 
 const Details = () => {
@@ -15,9 +16,13 @@ const Details = () => {
   return (
     <div>
       <div className='top'>
-        <NavLink to='/'>&crarr;</NavLink>
+        <NavLink to='/'>
+          <i class="fa-solid fa-chevron-left"></i>
+        </NavLink>
         <span>{country.name} Details</span>
-        <span></span>
+        <span>
+          <i class="fa-solid fa-gear"></i>
+        </span>
       </div>
       <div className='flag'>
         <img src={country.flag} alt={`${country.name}'s flag`} />

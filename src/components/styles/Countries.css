@@ -10,7 +10,7 @@ ul div img {
   margin-top: 20px;
   width: 100px;
   justify-self: flex-end;
-  align-self: flex-end;
+  align-self: center;
 }
 
  h3 {
@@ -33,8 +33,11 @@ li {
   padding-right: 10px;
 }
 
-li:nth-child(odd) {
-  background: rgb(48, 94, 186);
+@media (min-width: 768px) {
+
+  .countries li:nth-child(odd) {
+    background: rgb(48, 94, 186);
+  } 
 }
 
 .arrow-details {
