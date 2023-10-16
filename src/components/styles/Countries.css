@@ -37,7 +37,7 @@ li {
 
   .countries {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
     text-align: end;
     justify-content: flex-end;
     background: rgb(41, 79, 156);
